@@ -1,13 +1,13 @@
 class PigLatinizer
 
-  attr_accessor :string
+  attr_accessor :text
 
-  def initialize(string)
-    @string = string
+  def initialize(text)
+    @text = text
   end
 
   def phrase
-    words = string.split(" ")
+    words = text.split(" ")
     phrase = words.map {|word| piglatinize_word(word)}
     phrase.join(" ")
   end
